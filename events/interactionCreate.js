@@ -19,6 +19,18 @@ client.on("interactionCreate", async (interaction) => {
                 });
             } else if (option.value) args.push(option.value);
         }
+         const userperm = interaction.member.permissions.has(cmd.userperm);
+
+        if (!userperm)
+            return interaction.followUp({
+                content: `You need \`${cmd.userperm || []}\` Permissions`,
+            });
+
+        const botperm = interaction.guild.me.permissions.has(cmd.botperm);
+        if (!botperm)
+            return interaction.followUp({
+                content: `I need \`${cmd.botperm || []}\` Permissions`,
+            });
         interaction.member = interaction.guild.members.cache.get(interaction.user.id);
 
         cmd.run(client, interaction, args);
