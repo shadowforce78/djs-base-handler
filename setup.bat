@@ -1,21 +1,25 @@
 @echo off
-echo Checking for Node.js on your system...
-where node >nul 2>&1 || (
-    echo Node.js is not installed on your system.
-    echo Please install Node.js before continuing.
+echo Installing Node.js and NPM...
+
+:: download and install Node.js
+curl -sL https://nodejs.org/dist/latest/node.exe -o node.exe
+.\node.exe /ver > nul 2>&1
+if %errorlevel% neq 0 (
+    echo Failed to download Node.js. Please check your internet connection and try again.
     pause
     exit /b
 )
 
-echo Node.js is installed on your system.
+:: install dependencies with NPM
 echo Installing dependencies with NPM...
-npm install >nul 2>&1 || (
-    echo Installation failed. Please check your internet connection and try again.
+.\node.exe node_modules/npm/bin/npm-cli.js install
+if %errorlevel% neq 0 (
+    echo Failed to install dependencies with NPM. Please check your internet connection and try again.
     pause
     exit /b
 )
 
-echo Installation complete. 
+echo Installation complete.
 echo Your application is ready to run!
 
 echo Running your application...
