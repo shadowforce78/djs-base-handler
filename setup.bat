@@ -1,19 +1,29 @@
 @echo off
-echo Vérification de la présence de Node.js sur votre système...
+echo Checking for Node.js on your system...
 where node >nul 2>&1 || (
-    echo Node.js n'est pas installé sur votre système.
-    echo Veuillez installer Node.js avant de continuer.
+    echo Node.js is not installed on your system.
+    echo Please install Node.js before continuing.
     pause
     exit /b
 )
 
-echo Node.js est installé sur votre système.
-echo Installation de dépendances avec NPM...
+echo Node.js is installed on your system.
+echo Installing dependencies with NPM...
 npm install >nul 2>&1 || (
-    echo L'installation a échoué. Veuillez vérifier votre connexion internet et réessayer.
+    echo Installation failed. Please check your internet connection and try again.
     pause
     exit /b
 )
 
-echo Installation terminée. 
-echo Votre application est prête à être lancée!
+echo Installation complete. 
+echo Your application is ready to run!
+
+echo Running your application...
+start cmd /c "node index.js"
+
+echo You can also run your application with the "run-app.bat" command.
+echo Creating the "run-app.bat" file...
+echo node index.js > run-app.bat
+
+echo The "run-app.bat" file has been created successfully!
+pause
