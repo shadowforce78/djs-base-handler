@@ -1,5 +1,8 @@
 {
-    "token": "your bot's token",
-    "prefix": "!",
-    "mongooseConnectionString": ""
+    "token": "TOKEN_HERE",
+    "prefix": "PREFIX_HERE",
+    "mongooseConnectionString": "MONGODB_HERE",
+    "botID": "BOTID_HERE",
+    "devID": "DEVID_HERE",
+    "botName": "BOTNAME_HERE"
 }
