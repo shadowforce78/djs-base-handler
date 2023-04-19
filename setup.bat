@@ -17,4 +17,3 @@ npm install >nul 2>&1 || (
 
 echo Installation terminée. 
 echo Votre application est prête à être lancée!
-pause
