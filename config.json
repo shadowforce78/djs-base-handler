@@ -1,8 +1,5 @@
 {
-    "token": "TOKEN_HERE",
-    "prefix": "PREFIX_HERE",
-    "mongooseConnectionString": "MONGODB_HERE",
-    "botID": "BOTID_HERE",
-    "devID": "DEVID_HERE",
-    "botName": "BOTNAME_HERE"
+    "token": "MTE0NTAzNTIzNDEyODE2NzAwMg.GUrBlP.FeoclySSsTPDsNoKciucVrJ_ZjDh0HEtVASuzY",
+    "prefix": "e!",
+    "mongooseConnectionString": "mongodb+srv://scriptorjs:adam1903@arceusjs.aarhd.mongodb.net/SushiEco"
 }

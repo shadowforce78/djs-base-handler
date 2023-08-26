@@ -5,5 +5,9 @@ client.on("ready", () =>
 );
 
 client.on('ready', () => {
-    client.user.setActivity('Some activity', { type: 'PLAYING' });
+    let number = 0;
+    setInterval(() => {
+        number = number + 1;
+        client.user.setActivity(`Counting to infinity : ${number}`, { type: "WATCHING" })
+    }, 2500)
 })
