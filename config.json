@@ -1,5 +1,5 @@
 {
-    "token": "MTE0NTAzNTIzNDEyODE2NzAwMg.GUrBlP.FeoclySSsTPDsNoKciucVrJ_ZjDh0HEtVASuzY",
-    "prefix": "e!",
-    "mongooseConnectionString": "mongodb+srv://scriptorjs:adam1903@arceusjs.aarhd.mongodb.net/SushiEco"
+    "token": "",
+    "prefix": "",
+    "mongooseConnectionString": ""
 }
